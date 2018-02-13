@@ -10,7 +10,7 @@ import java.util.TimeZone;
 
 /**
  *
- * @author
+ * @author Afrie
  */
 public class Account {
     private int id = 0;
