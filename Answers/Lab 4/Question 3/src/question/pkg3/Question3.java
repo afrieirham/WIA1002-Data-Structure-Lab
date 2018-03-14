@@ -19,6 +19,8 @@ public class Question3 {
         CompareMax a = new CompareMax();
         CompareMax b = new CompareMax();
         
+        CompareMax.maximum(3, 4, 5);
+        
         System.out.println(a.maximum(2.3, 5.2, 4.5));
         System.out.println(a.maximum("Information System", "Software Engineering", "Artificial Intelligence"));
         System.out.println(CompareMax.maximum(55, 54, 99));
