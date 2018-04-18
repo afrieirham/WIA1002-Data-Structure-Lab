@@ -1,0 +1,50 @@
+
+
+public class ArrayBagDemo {
+    public static void main(String[] args) {
+        BagInterface<String> bag1 = new ArrayBag<>();
+        BagInterface<String> bag2 = new ArrayBag<>();
+        
+        String[] contentsOfBag1={"A","A","B","A","C","A"};
+        String[] contentsOfBag2 = {"A","B","A","C","B","C","D","another string"};
+        
+        System.out.println("bag1 : ");
+        testAdd(bag1,contentsOfBag1);
+        displayBag(bag1);
+        
+        System.out.println("bag2 : ");
+        testAdd(bag2,contentsOfBag2);
+        displayBag(bag2);
+  
+        BagInterface<String> bag3 = bag1.union(bag2);
+        System.out.println("bag3 : ");
+        displayBag(bag3);
+        
+        BagInterface<String> bag4 = bag1.intersection(bag2);
+        System.out.println("bag4 : ");
+        displayBag(bag4);
+        
+        BagInterface<String> bag5 = bag1.difference(bag2);
+        System.out.println("bag5 : ");
+        displayBag(bag5);
+        
+        
+    }
+    private static void testAdd(BagInterface<String> aBag, String[] content){
+        System.out.print("Adding ");
+                for (int index = 0; index < content.length; index++){
+                   aBag.add(content[index]);
+          System.out.print(content[index] + " ");
+                 } 
+        System.out.println();
+         }
+    
+    private static void displayBag(BagInterface<String> aBag){
+         System.out.println("The bag contains " + aBag.getCurrentSize() + " string(s), as follows:");                
+                 Object[] bagArray = aBag.toArray();
+                 for (int index = 0; index < bagArray.length; index++){
+                         System.out.print(bagArray[index] + " ");
+                 } 
+                 System.out.println();
+         } 
+}
