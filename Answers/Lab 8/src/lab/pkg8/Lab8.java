@@ -38,6 +38,22 @@ public class Lab8 {
         
     }
     
+    public static void insertionSortLargest(int[] array){
+        int n = array.length;
+        for(int i=1; i<n; i++){
+            int key = array[i];
+            int j = i-1;
+            
+            while(j>=0 && array[j] > key){
+                array[j+1] = array[j];
+                j = j-1;
+            }
+            array[j+1] = key;
+        }
+        
+        System.out.println(Arrays.toString(array));
+    }
+    
     public static void selectionSort(int[] arr){
         
         for(int i=0; i<arr.length; i++){
@@ -53,6 +69,21 @@ public class Lab8 {
         
         System.out.println(Arrays.toString(arr));
         
+    }
+    
+    public static void bubbleSort(int[] arr){
+        
+        for(int i= arr.length - 1; i>0; i--){
+            for(int j=0; j<i; j++){
+                if(arr[j] > arr[j+1]){
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+        
+        System.out.println(Arrays.toString(arr));
     }
     
     public static void binarySearch(int value, int[] arr){
@@ -78,69 +109,40 @@ public class Lab8 {
         System.out.println(value + " are not in the array.");
     }
     
-    public static void bubbleSort(int[] arr){
-        
-        for(int i= arr.length - 1; i>0; i--){
-            for(int j=0; j<i; j++){
-                if(arr[j] > arr[j+1]){
-                    int temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
-                }
-            }
-        }
-        
-        System.out.println(Arrays.toString(arr));
-    }
+//    public static void selectionSortSmallest(int[] arr){
+//        
+//        for(int i=0; i<arr.length; i++){
+//            for(int j=0; j<=i-j; j++){
+//                if(arr[i] < arr[j]){
+//                    int temp = arr[j];
+//                    arr[j] = arr[i];
+//                    arr[i] = temp;
+//                    
+//                }
+//            }
+//        }
+//        System.out.print("Ascending order: ");
+//        System.out.println(Arrays.toString(arr));
+//        
+//    }
+//    
+//    public static void selectionSortLargest(int[] arr){
+//        
+//        for(int i=0; i<arr.length; i++){
+//            for(int j=0; j<=i; j++){
+//                if(arr[i] > arr[j]){
+//                    int temp = arr[j];
+//                    arr[j] = arr[i];
+//                    arr[i] = temp;
+//                    
+//                }
+//            }
+//        }
+//        System.out.print("Descending order: ");
+//        System.out.println(Arrays.toString(arr));
+//        
+//    }
     
-    public static void selectionSortSmallest(int[] arr){
-        
-        for(int i=0; i<arr.length; i++){
-            for(int j=0; j<=i-j; j++){
-                if(arr[i] < arr[j]){
-                    int temp = arr[j];
-                    arr[j] = arr[i];
-                    arr[i] = temp;
-                    
-                }
-            }
-        }
-        System.out.print("Ascending order: ");
-        System.out.println(Arrays.toString(arr));
-        
-    }
     
-    public static void selectionSortLargest(int[] arr){
-        
-        for(int i=0; i<arr.length; i++){
-            for(int j=0; j<=i; j++){
-                if(arr[i] > arr[j]){
-                    int temp = arr[j];
-                    arr[j] = arr[i];
-                    arr[i] = temp;
-                    
-                }
-            }
-        }
-        System.out.print("Descending order: ");
-        System.out.println(Arrays.toString(arr));
-        
-    }
-    
-    public static void insertionSortLargest(int[] array){
-        int n = array.length;
-        for(int i=1; i<n; i++){
-            int key = array[i];
-            int j = i-1;
-            
-            while(j>=0 && array[j] > key){
-                array[j+1] = array[j];
-                j = j-1;
-            }
-            array[j+1] = key;
-        }
-        
-        System.out.println(Arrays.toString(array));
-    }
     
 }
