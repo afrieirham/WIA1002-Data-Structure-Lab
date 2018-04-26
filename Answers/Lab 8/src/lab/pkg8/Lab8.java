@@ -19,7 +19,6 @@ public class Lab8 {
     public static void main(String[] args) {
         int[] arr = {45, 7, 2, 8, 19, 3};
         int[] array = {10, 34, 2, 56, 7, 67, 88, 42};
-        //test commit
 //        System.out.println("Question 1, Question 2, Question 3");
 //        System.out.println("Unsorted Array: " + Arrays.toString(arr));
 //        selectionSortSmallest(arr);
