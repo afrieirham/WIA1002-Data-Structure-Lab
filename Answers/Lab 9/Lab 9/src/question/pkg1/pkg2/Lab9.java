@@ -25,7 +25,9 @@ public class Lab9 {
 //        System.out.println("");
 //        Question2();
 //        System.out.println("");
-        Question3();
+//        Question3();
+        System.out.println("");
+        
         
     }
     
@@ -86,6 +88,20 @@ public class Lab9 {
         }
         
         System.out.println("Total: " + total);
+    }
+    
+    public static void Question5(){
+        
+        MyStack<Integer> tower1 = new MyStack<>();
+        MyStack<Integer> tower2 = new MyStack<>();
+        MyStack<Integer> tower3 = new MyStack<>();
+        
+        for(int i=3; i>=0; i--){
+            tower1.push(i);
+        }
+        
+        
+        
     }
     
 }
