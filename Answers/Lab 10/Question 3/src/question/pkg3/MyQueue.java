@@ -24,12 +24,23 @@ public class MyQueue {
         priceList.add(price);
     }
     
-    public void sell(int share, int price){
+    public boolean sell(int share, int price){
         
         if(share > (int) shareList.getFirst()){
             int remainShare = share - (int) shareList.getFirst();
-            calculate((int) shareList.getFirst(), (int) priceList.getFirst(), price);
-            sell(remainShare, price);
+            System.out.println("Gain / Loss: " + calculate((int) shareList.getFirst(), (int) priceList.getFirst(), price));
+            System.out.println("Total Gain / Loss: " + getTotal());
+            shareList.removeFirst();
+            priceList.removeFirst();
+            
+            if(shareList.isEmpty()){
+                System.out.println("");
+                System.out.println("No shares to Sell");
+                System.out.println("Final Capital: " + getTotal());
+                return false;
+            }
+            else
+                sell(remainShare, price);
         }
         else{
             int firstShare;
@@ -44,9 +55,8 @@ public class MyQueue {
             System.out.println("Gain / Loss: " + calculate(share, (int) priceList.getFirst(), price));
             System.out.println("Total Gain / Loss: " + getTotal());
         }
-            
         
-        
+        return true;
     }
     
     private String getShare(){

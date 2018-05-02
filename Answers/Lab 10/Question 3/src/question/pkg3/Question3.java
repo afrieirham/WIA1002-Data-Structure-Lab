@@ -23,6 +23,7 @@ public class Question3 {
         String transaction;
         int shares;
         int price;
+        boolean status = true;
         
         Scanner input = new Scanner(System.in);
         
@@ -49,12 +50,12 @@ public class Question3 {
             else if(transaction.equals("Sell")){
                 System.out.println("");
                 System.out.println("Selling...");
-                list.sell(shares, price);
+                status = list.sell(shares, price);
                 list.display();
                 System.out.println("");
             }
             
-        }while(true);
+        }while(status == true);
         
     }
     
