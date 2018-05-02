@@ -16,8 +16,8 @@ public class MyQueue<E> {
     private java.util.LinkedList list = new java.util.LinkedList<>();
     
     public MyQueue(E[] e){
-        for(int i=0; i<e.length; i++){
-            list.add(e);
+        for (E e1 : e) {
+            enqueue(e1);
         }
     }
     
